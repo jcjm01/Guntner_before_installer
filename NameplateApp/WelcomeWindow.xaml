@@ -1,0 +1,33 @@
+﻿<Window x:Class="NameplateApp.WelcomeWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bienvenido" Height="300" Width="400" WindowStartupLocation="CenterScreen"
+        Background="#FF2D2D30" Foreground="White">
+
+    <Grid>
+        <!-- Fondo con degradado, debe estar al principio -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF2D2D30" Offset="0.0"/>
+                <GradientStop Color="#FF41474D" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Imagen superior centrada -->
+        <Image Source="Images/FEIYANG.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Margin="0,20,0,0"/>
+
+        <!-- Título de Bienvenida -->
+        <TextBlock x:Name="txtWelcome" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" 
+                   TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" Margin="0,0,0,50"/>
+
+        <!-- Botón de Comenzar -->
+        <Button Content="Comenzar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30" 
+                Width="150" Height="40" Click="StartButton_Click"
+                Background="#FF007ACC" Foreground="White" FontSize="16" FontWeight="Bold"
+                BorderThickness="0" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="10" Direction="320" ShadowDepth="5"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
